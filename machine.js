@@ -48,10 +48,8 @@ function cupsOfCoffee(userWater,userMilk,userBeans, userCups){
     console.log(`Yes, I can make that amount of coffee (and even ${res} more than that)`);
   }else if(total == userCups){
     console.log("Yes, I can make that amount of coffee");
-  }else if(total < userCups){
-    console.log(`No, I can make only ${total} cups of coffee`);
   }else{
-    console.log("some error");
+    console.log(`No, I can make only ${total} cups of coffee`);
   }
 }
 
