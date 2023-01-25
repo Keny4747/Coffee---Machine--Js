@@ -34,16 +34,26 @@ function coffeeAvailable(){
     console.log("Write how many cups of coffee you will need:");
     let userCups=Number(input());
 
-    cupsOfCoffee(userWater,userMilk,userBeans);
+    
+    cupsOfCoffee(userWater,userMilk,userBeans,userCups);
 }
-function cupsOfCoffee(userWater,userMilk,userBeans){
-  var totalW = userWater / this.water;
-  var totalM = userMilk / this.milk;
-  var totalB = userBeans / this.beans;
+function cupsOfCoffee(userWater,userMilk,userBeans, userCups){
+  var totalW = Math.floor(userWater / water);
+  var totalM = Math.floor(userMilk / milk);
+  var totalB = Math.floor(userBeans / beans);
+  var total =  Math.min(totalB,Math.min(totalW,totalM));
 
-  
+  var res = total-userCups;
+  if(total>userCups){
+    console.log(`Yes, I can make that amount of coffee (and even ${res} more than that)`);
+  }else if(total == userCups){
+    console.log("Yes, I can make that amount of coffee");
+  }else if(total < userCups){
+    console.log(`No, I can make only ${total} cups of coffee`);
+  }else{
+    console.log("some error");
+  }
 }
 
 //RUN APP:
-let data = inputUser();
-calculateCoffe(data);
+coffeeAvailable();
