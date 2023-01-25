@@ -34,6 +34,14 @@ function coffeeAvailable(){
     console.log("Write how many cups of coffee you will need:");
     let userCups=Number(input());
 
+    cupsOfCoffee(userWater,userMilk,userBeans);
+}
+function cupsOfCoffee(userWater,userMilk,userBeans){
+  var totalW = userWater / this.water;
+  var totalM = userMilk / this.milk;
+  var totalB = userBeans / this.beans;
+
+  
 }
 
 //RUN APP:

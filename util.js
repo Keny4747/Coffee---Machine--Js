@@ -11,3 +11,6 @@ function replaceString(data) {
 }
 
 console.log(replaceString(data));
+
+//Math floor:
+console.log(Math.floor(23.49));
