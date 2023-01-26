@@ -29,28 +29,43 @@ function buy() {
 
   switch (userInput) {
     case 1:
-      machine.water -= espresso.water;
-      machine.beans -= espresso.beans;
+      subtractSupply(espresso.water, espresso.milk, espresso.beans);
       machine.money += espresso.price;
-      machine.cups--;
       break;
     case 2:
-      machine.water -= latte.water;
-      machine.milk -= latte.milk;
-      machine.beans -= latte.beans;
+      subtractSupply(latte.water, latte.milk, latte.beans);
       machine.money += latte.price;
-      machine.cups--;
       break;
     case 3:
-      machine.water -= capuccino.water;
-      machine.milk -= capuccino.milk;
-      machine.beans -= capuccino.beans;
+      subtractSupply(capuccino.water, capuccino.milk, capuccino.beans);
       machine.money += capuccino.price;
-      machine.cups--;
       break;
     default:
       console.log("Invalid input");
   }
+}
+function fillMachine() {
+  console.log("Write how many ml of water you want to add: ");
+  let userWater = Number(input());
+  console.log("Write how many ml of milk you want to add:");
+  let userMilk = Number(input());
+  console.log("Write how many grams of coffee beans you want to add: ");
+  let userBeans = Number(input());
+  console.log("Write how many disposable cups you want to add: ");
+  let userCups = Number(input());
+  addSupply(userWater, userMilk, userBeans, userCups);
+}
+function addSupply(water, milk, beans, cups) {
+  machine.water += water;
+  machine.milk += milk;
+  machine.beans += beans;
+  machine.cups += cups;
+}
+function subtractSupply(water, milk, beans) {
+  machine.water -= water;
+  machine.milk -= milk;
+  machine.beans -= beans;
+  machine.cups--;
 }
 function menu() {
   console.log("\nWrite action (buy, fill, take):");
@@ -58,10 +73,13 @@ function menu() {
   switch (user) {
     case "buy":
       buy();
-      console.log('');
+      console.log("");
       statusCoffeeMachine();
       break;
-    case "fill": //TODO;
+    case "fill":
+      fillMachine();
+      console.log("");
+      statusCoffeeMachine();
       break;
     case "take": //TODO;
       break;
