@@ -58,6 +58,7 @@ function menu() {
   switch (user) {
     case "buy":
       buy();
+      console.log('');
       statusCoffeeMachine();
       break;
     case "fill": //TODO;
