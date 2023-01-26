@@ -55,6 +55,10 @@ function fillMachine() {
   let userCups = Number(input());
   addSupply(userWater, userMilk, userBeans, userCups);
 }
+function takeMoney() {
+  console.log(`I gave you $${machine.money}`);
+  machine.money -= machine.money;
+}
 function addSupply(water, milk, beans, cups) {
   machine.water += water;
   machine.milk += milk;
@@ -81,7 +85,10 @@ function menu() {
       console.log("");
       statusCoffeeMachine();
       break;
-    case "take": //TODO;
+    case "take":
+      takeMoney();
+      console.log("");
+      statusCoffeeMachine();
       break;
     default:
       console.log("Invalid input");
