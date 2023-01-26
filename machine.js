@@ -2,13 +2,7 @@ const input = require("sync-input");
 const water = 200;
 const milk = 50;
 const beans = 15;
-var machine = {
-  water: 400,
-  milk: 540,
-  beans: 120,
-  cups: 9,
-  money: 550,
-};
+var machine = {water: 400,milk: 540,beans: 120,cups: 9,money: 550,};
 function statusCoffeeMachine() {
   console.log(`The coffee machine has:
 ${machine.water} ml of water
@@ -17,7 +11,6 @@ ${machine.beans} g of coffee beans
 ${machine.cups} disposable cups
 $${machine.money} of money`);
 }
-
 function buy() {
   const espresso = { water: 250, milk: 0, beans: 16, price: 4 };
   const latte = { water: 350, milk: 75, beans: 20, price: 7 };
@@ -94,7 +87,7 @@ function menu() {
       console.log("Invalid input");
   }
 }
-function coffeeAvailable() {
+/*function coffeeAvailable() {
   console.log("Write how many ml of water the coffee machine has:");
   let userWater = Number(input());
   console.log("Write how many ml of milk the coffee machine has:");
@@ -104,8 +97,8 @@ function coffeeAvailable() {
   console.log("Write how many cups of coffee you will need:");
   let userCups = Number(input());
   cupsOfCoffee(userWater, userMilk, userBeans, userCups);
-}
-function cupsOfCoffee(userWater, userMilk, userBeans, userCups) {
+}*/
+/*function cupsOfCoffee(userWater, userMilk, userBeans, userCups) {
   var totalW = Math.floor(userWater / water);
   var totalM = Math.floor(userMilk / milk);
   var totalB = Math.floor(userBeans / beans);
@@ -121,7 +114,7 @@ function cupsOfCoffee(userWater, userMilk, userBeans, userCups) {
   } else {
     console.log(`No, I can make only ${total} cups of coffee`);
   }
-}
+}*/
 
 //RUN APP:
 statusCoffeeMachine();
