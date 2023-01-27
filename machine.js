@@ -1,7 +1,4 @@
 const input = require("sync-input");
-const water = 200;
-const milk = 50;
-const beans = 15;
 var machine = {water: 400,milk: 540,beans: 120,cups: 9,money: 550,};
 function statusCoffeeMachine() {
   console.log(`\nThe coffee machine has:
@@ -70,7 +67,6 @@ function subtractSupply(water, milk, beans,price) {
     machine.money+=price;
 
   }
-
 }
 function menu() {
   console.log("\nWrite action (buy, fill, take, remaining, exit):");
@@ -97,11 +93,8 @@ function menu() {
     flag=true;
   }
 }
-
 //RUN APP:
 var flag = false;
 do{
   menu();
 }while(flag==false);
-
-//coffeeAvailable();
