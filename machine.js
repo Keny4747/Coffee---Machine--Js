@@ -66,7 +66,7 @@ function subtractSupply(water, milk, beans,price) {
     console.log('I have enough resources, making you a coffee!')
     machine.water -= water;
     machine.milk -= milk;
-    machine.beans -= bean
+    machine.beans -= beans;
     machine.money+=price;
 
   }
