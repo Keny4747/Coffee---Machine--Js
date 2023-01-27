@@ -59,10 +59,17 @@ function addSupply(water, milk, beans, cups) {
   machine.cups += cups;
 }
 function subtractSupply(water, milk, beans) {
-  machine.water -= water;
-  machine.milk -= milk;
-  machine.beans -= beans;
-  machine.cups--;
+
+  if(machine.water<water){
+    console.log('Sorry, not enough water!');
+  }else{
+    console.log('I have enough resources, making you a coffee!')
+    machine.water -= water;
+    machine.milk -= milk;
+    machine.beans -= beans;
+    machine.cups--;
+  }
+
 }
 function menu() {
   console.log("\nWrite action (buy, fill, take, remaining, exit):");
