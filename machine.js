@@ -98,8 +98,15 @@ function menu() {
     default:
       console.log('Invalid input');
   }
+  if(user=='exit'){
+    flag=true;
+  }
 }
 
 //RUN APP:
-menu();
+var flag = false;
+do{
+  menu();
+}while(flag==false);
+
 //coffeeAvailable();
