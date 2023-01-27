@@ -65,26 +65,31 @@ function subtractSupply(water, milk, beans) {
   machine.cups--;
 }
 function menu() {
-  console.log("\nWrite action (buy, fill, take):");
+  console.log("\nWrite action (buy, fill, take, remaining, exit):");
   let user = String(input());
   switch (user) {
-    case "buy":
+    case 'buy':
       buy();
-      console.log("");
+      console.log('');
       statusCoffeeMachine();
       break;
-    case "fill":
+    case 'fill':
       fillMachine();
-      console.log("");
+      console.log('');
       statusCoffeeMachine();
       break;
-    case "take":
+    case 'take':
       takeMoney();
-      console.log("");
+      console.log('');
       statusCoffeeMachine();
       break;
+      case 'remaining':
+        statusCoffeeMachine();
+      break;
+      case 'exit'://TODO
+        break;
     default:
-      console.log("Invalid input");
+      console.log('Invalid input');
   }
 }
 /*function coffeeAvailable() {
@@ -117,6 +122,5 @@ function menu() {
 }*/
 
 //RUN APP:
-statusCoffeeMachine();
 menu();
 //coffeeAvailable();
