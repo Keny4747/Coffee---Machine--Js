@@ -48,7 +48,7 @@ function fillMachine() {
   addSupply(userWater, userMilk, userBeans, userCups);
 }
 function takeMoney() {
-  console.log(`I gave you $${machine.money}`);
+  console.log(`\nI gave you $${machine.money}`);
   machine.money -= machine.money;
 }
 function addSupply(water, milk, beans, cups) {
@@ -84,8 +84,6 @@ function menu() {
       break;
     case 'take':
       takeMoney();
-   
-      statusCoffeeMachine();
       break;
       case 'remaining':
         statusCoffeeMachine();
