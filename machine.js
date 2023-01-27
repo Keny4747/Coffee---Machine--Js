@@ -22,16 +22,15 @@ function buy() {
 
   switch (userInput) {
     case 1:
-      subtractSupply(espresso.water, espresso.milk, espresso.beans);
-      machine.money += espresso.price;
+      subtractSupply(espresso.water, espresso.milk, espresso.beans,espresso.price);
       break;
     case 2:
-      subtractSupply(latte.water, latte.milk, latte.beans);
-      machine.money += latte.price;
+      subtractSupply(latte.water, latte.milk, latte.beans,latte.price);
+      
       break;
     case 3:
-      subtractSupply(capuccino.water, capuccino.milk, capuccino.beans);
-      machine.money += capuccino.price;
+      subtractSupply(capuccino.water, capuccino.milk, capuccino.beans,capuccino.price);
+  
       break;
     default:
       console.log("Invalid input");
@@ -57,8 +56,9 @@ function addSupply(water, milk, beans, cups) {
   machine.milk += milk;
   machine.beans += beans;
   machine.cups += cups;
+ 
 }
-function subtractSupply(water, milk, beans) {
+function subtractSupply(water, milk, beans,price) {
 
   if(machine.water<water){
     console.log('Sorry, not enough water!');
@@ -66,8 +66,9 @@ function subtractSupply(water, milk, beans) {
     console.log('I have enough resources, making you a coffee!')
     machine.water -= water;
     machine.milk -= milk;
-    machine.beans -= beans;
-    machine.cups--;
+    machine.beans -= bean
+    machine.money+=price;
+
   }
 
 }
