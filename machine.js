@@ -77,13 +77,9 @@ function menu() {
   switch (user) {
     case 'buy':
       buy();
-    
-      statusCoffeeMachine();
       break;
     case 'fill':
       fillMachine();
-    
-      statusCoffeeMachine();
       break;
     case 'take':
       takeMoney();
