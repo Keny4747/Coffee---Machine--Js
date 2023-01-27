@@ -99,34 +99,6 @@ function menu() {
       console.log('Invalid input');
   }
 }
-/*function coffeeAvailable() {
-  console.log("Write how many ml of water the coffee machine has:");
-  let userWater = Number(input());
-  console.log("Write how many ml of milk the coffee machine has:");
-  let userMilk = Number(input());
-  console.log("Write how many grams of coffee beans the coffee machine has:");
-  let userBeans = Number(input());
-  console.log("Write how many cups of coffee you will need:");
-  let userCups = Number(input());
-  cupsOfCoffee(userWater, userMilk, userBeans, userCups);
-}*/
-/*function cupsOfCoffee(userWater, userMilk, userBeans, userCups) {
-  var totalW = Math.floor(userWater / water);
-  var totalM = Math.floor(userMilk / milk);
-  var totalB = Math.floor(userBeans / beans);
-  var total = Math.min(totalB, Math.min(totalW, totalM));
-
-  var res = total - userCups;
-  if (total > userCups) {
-    console.log(
-      `Yes, I can make that amount of coffee (and even ${res} more than that)`
-    );
-  } else if (total == userCups) {
-    console.log("Yes, I can make that amount of coffee");
-  } else {
-    console.log(`No, I can make only ${total} cups of coffee`);
-  }
-}*/
 
 //RUN APP:
 menu();
