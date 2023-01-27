@@ -4,7 +4,7 @@ const milk = 50;
 const beans = 15;
 var machine = {water: 400,milk: 540,beans: 120,cups: 9,money: 550,};
 function statusCoffeeMachine() {
-  console.log(`The coffee machine has:
+  console.log(`\nThe coffee machine has:
 ${machine.water} ml of water
 ${machine.milk} ml of milk
 ${machine.beans} g of coffee beans
@@ -77,17 +77,17 @@ function menu() {
   switch (user) {
     case 'buy':
       buy();
-      console.log('');
+    
       statusCoffeeMachine();
       break;
     case 'fill':
       fillMachine();
-      console.log('');
+    
       statusCoffeeMachine();
       break;
     case 'take':
       takeMoney();
-      console.log('');
+   
       statusCoffeeMachine();
       break;
       case 'remaining':
