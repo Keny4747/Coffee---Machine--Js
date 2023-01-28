@@ -13,7 +13,7 @@ function buy() {
   const latte = { water: 350, milk: 75, beans: 20, price: 7 };
   const capuccino = { water: 200, milk: 100, beans: 12, price: 6 };
   console.log(
-    "What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:"
+    "What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:"
   );
   let userInput = Number(input());
 
@@ -30,7 +30,7 @@ function buy() {
   
       break;
     default:
-      console.log("Invalid input");
+      break;
   }
 }
 function fillMachine() {
@@ -65,7 +65,7 @@ function subtractSupply(water, milk, beans,price) {
     machine.milk -= milk;
     machine.beans -= beans;
     machine.money+=price;
-
+    machine.cups--;
   }
 }
 function menu() {
